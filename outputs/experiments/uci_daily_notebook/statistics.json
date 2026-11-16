@@ -1,0 +1,17 @@
+{
+  "total": 9747747.934,
+  "mean": 31959.82929180328,
+  "median": 27978.41,
+  "std": 17414.261663884943,
+  "min": -1566.23,
+  "max": 112141.11,
+  "growth_pct": -45.201290820792025,
+  "observations": 305,
+  "calendar_periods": 374,
+  "missing_periods": 69,
+  "zero_periods": 0,
+  "negative_periods": 1,
+  "start": "2010-12-01T00:00:00",
+  "end": "2011-12-09T00:00:00",
+  "growth_definition": "Percentage change from the first to the latest observed period, relative to the absolute first value; undefined when the first value is zero."
+}

@@ -1,0 +1,7 @@
+{
+  "period": 7,
+  "strength": 0.38583356614160713,
+  "amplitude": 26747.50667136691,
+  "residual_std": 9898.845174849357,
+  "explanation": "The estimated repeating component is moderate at a period of 7 observations. STL seasonal strength is 0.386; the 5th–95th percentile seasonal amplitude is 26,747.51 sales units. Residual standard deviation is 9,898.85. This is a descriptive decomposition, not proof of a causal holiday effect or a guarantee of future seasonality."
+}

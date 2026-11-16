@@ -1,0 +1,4 @@
+-r requirements.txt
+playwright==1.53.0
+ruff==0.12.4
+pypdf==5.8.0

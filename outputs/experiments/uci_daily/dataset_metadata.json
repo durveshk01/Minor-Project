@@ -1,0 +1,60 @@
+{
+  "name": "UCI Online Retail — recorded daily net revenue",
+  "kind": "real",
+  "source_url": "https://archive.ics.uci.edu/dataset/352/online+retail",
+  "download_url": "https://archive.ics.uci.edu/static/public/352/online+retail.zip",
+  "citation": "Chen, D. (2015). Online Retail. UCI Machine Learning Repository. DOI: 10.24432/C5BW33.",
+  "license": "CC BY 4.0",
+  "currency": "GBP",
+  "downloaded_at": "2026-11-16T10:27:54.090920+00:00",
+  "source_sha256": "43465a06f2ccf7c8b5bd2892bc7defb52f97487934fe93b16ae4c3936424676d",
+  "source_rows": 541909,
+  "source_columns": [
+    "InvoiceNo",
+    "StockCode",
+    "Description",
+    "Quantity",
+    "InvoiceDate",
+    "UnitPrice",
+    "CustomerID",
+    "Country"
+  ],
+  "date_start": "2010-12-01T08:26:00",
+  "date_end": "2011-12-09T12:50:00",
+  "derived_rows": 305,
+  "negative_transaction_count": 9290,
+  "exact_source_duplicates": 5268,
+  "derivation": "Sales = Quantity × UnitPrice; sum every transaction by invoice calendar date. Refunds, cancellations and exact source duplicates are retained. Customer identifiers are excluded from the derived file.",
+  "missing_dates": "Dates without source transactions are absent, not automatically filled. Choose an explicit missing-period strategy in preprocessing.",
+  "filename": "uci_online_retail_daily.csv",
+  "dataset_file_sha256": "d9b2e2d967602d1aa41fcdb48701ba5d5bc07c4bed056ce21e8f23eebaaeef5c",
+  "input_rows": 305,
+  "filtered_rows": 305,
+  "cleaned_rows": 305,
+  "frequency": "D",
+  "aggregation": "sum",
+  "mapping": {
+    "date": "Date",
+    "sales": "Sales",
+    "quantity": null,
+    "unit_price": null,
+    "holiday": null
+  },
+  "cleaning": {
+    "invalid_rows": "reject",
+    "duplicates": "keep",
+    "missing_sales": "reject",
+    "negative_sales": "keep",
+    "date_format": null,
+    "day_first": false
+  },
+  "aggregation_options": {
+    "frequency": "D",
+    "method": "sum",
+    "missing_periods": "ffill",
+    "source_frequency": "D",
+    "regressors": []
+  },
+  "filters": {},
+  "date_range": null
+}

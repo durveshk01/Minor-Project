@@ -1,0 +1,12 @@
+﻿operation,affected_rows,detail
+Convert dates and normalize to calendar date,305,Source: Date; format: mixed; day-first: False; timezone-aware inputs normalized to UTC.
+Convert sales to numeric,305,Source: Sales; non-finite values are invalid.
+Invalid-record policy,0,Detected 0; retained by explicit policy.
+Missing-sales policy,0,Detected 0; retained by explicit policy.
+Negative-sales policy,0,Detected 1; retained by explicit policy.
+Duplicate policy,0,Detected 0; retained by explicit policy.
+Chronological sorting,305,Stable date sort; source-row identifiers retained.
+Aggregate sales,305,sum into 374 D periods; periods with any missing sales remain unknown.
+Build continuous calendar index,69,69 absent periods and 0 incomplete periods detected.
+Missing-period policy,69,Policy: ffill. Original observations and imputed periods remain distinguishable; imputed targets are not scored during evaluation.
+Flag period outliers using 1.5 × IQR,4,"Diagnostic only. No values clipped, replaced or removed; no full-series thresholds used by models."

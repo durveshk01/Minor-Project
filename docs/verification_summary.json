@@ -1,0 +1,142 @@
+{
+  "verified_at": "2026-11-16T17:08:43.028380+00:00",
+  "python": "3.12.10",
+  "experiments": [
+    {
+      "directory": "outputs/experiments/uci_daily",
+      "status": "passed",
+      "artifact_checksums": 37,
+      "dataset_fingerprint": "c40c7a2d953a48c7c668e979f4b87a011afccf2f6d969a037936b58f9d2adf02",
+      "calendar_periods": 374,
+      "observed_periods": 305,
+      "unknown_periods": 69,
+      "holdout_periods": 30,
+      "scored_holdout_targets": 26,
+      "candidate_rmse": {
+        "ARIMA": 19529.031449786424,
+        "SARIMA": 16669.55999974924,
+        "Prophet": 17955.768433582998
+      },
+      "selected_model": "SARIMA",
+      "strongest_baseline_rmse": 15328.037260530382,
+      "selected_model_beats_strongest_baseline": false,
+      "full_history_periods": 374,
+      "future_rows": {
+        "ARIMA": 30,
+        "SARIMA": 30,
+        "Prophet": 30
+      },
+      "selected_raw_point_total": 1693961.8611154016,
+      "pdf_pages": 9,
+      "excel_sheets": 16,
+      "explanation_source": "Local analytics"
+    },
+    {
+      "directory": "outputs/experiments/uci_daily_notebook",
+      "status": "passed",
+      "artifact_checksums": 37,
+      "dataset_fingerprint": "c40c7a2d953a48c7c668e979f4b87a011afccf2f6d969a037936b58f9d2adf02",
+      "calendar_periods": 374,
+      "observed_periods": 305,
+      "unknown_periods": 69,
+      "holdout_periods": 30,
+      "scored_holdout_targets": 26,
+      "candidate_rmse": {
+        "ARIMA": 19529.031449786424,
+        "SARIMA": 16669.55999974924,
+        "Prophet": 17955.768433582998
+      },
+      "selected_model": "SARIMA",
+      "strongest_baseline_rmse": 15328.037260530382,
+      "selected_model_beats_strongest_baseline": false,
+      "full_history_periods": 374,
+      "future_rows": {
+        "ARIMA": 30,
+        "SARIMA": 30,
+        "Prophet": 30
+      },
+      "selected_raw_point_total": 1693961.8611154016,
+      "pdf_pages": 9,
+      "excel_sheets": 16,
+      "explanation_source": "Local analytics"
+    }
+  ],
+  "notebook_cli_reproduction": "passed",
+  "documentation": {
+    "status": "passed",
+    "markdown_files": 12,
+    "local_links": 64
+  },
+  "qa": {
+    "status": "passed",
+    "pytest_passed": 160,
+    "browser_checks": 63,
+    "browser_duration_seconds": 202.5894077999983,
+    "browser": "chrome",
+    "browser_javascript_exceptions": 0,
+    "screenshots": 16,
+    "gemini_ui_source": "Local analytics",
+    "notebook_executed_cells": 15,
+    "notebook_errors": 0,
+    "notebook_duration_seconds": 10.770617300004233,
+    "ruff": "passed",
+    "dependencies": "passed",
+    "source_inventory": {
+      "inspected_files": 107,
+      "python_files": 64,
+      "audit_updated_files": 47,
+      "issue_counts": {
+        "identified": 42,
+        "fixed": 42,
+        "severity": {
+          "Critical": 0,
+          "High": 19,
+          "Medium": 22,
+          "Low": 1
+        },
+        "remaining_critical_high": 0
+      },
+      "circular_imports": 0,
+      "credential_scan": "passed",
+      "current_source_checksums": "passed"
+    },
+    "isolated_runtime": {
+      "status": "passed",
+      "created_environment": true,
+      "initial_packages": [
+        {
+          "name": "pip",
+          "version": "25.0.1"
+        }
+      ],
+      "pytest_passed": 160,
+      "duration_seconds": 123.2724034000421
+    },
+    "browser_model_frequency_coverage": {
+      "D": [
+        "ARIMA",
+        "SARIMA",
+        "Prophet"
+      ],
+      "W-FRI": [
+        "ARIMA",
+        "SARIMA",
+        "Prophet"
+      ],
+      "MS": [
+        "ARIMA",
+        "SARIMA",
+        "Prophet"
+      ]
+    },
+    "gemini_live_recheck": {
+      "verified_at": "2026-11-16T16:29:31.206683+00:00",
+      "model": "gemini-3.1-flash-lite",
+      "connectivity_status": "success",
+      "generation_status": "service_unavailable",
+      "source": "Local analytics"
+    },
+    "environment_scope": "Local Windows/Python execution and resized browser viewports; hosted Colab and physical devices were not tested."
+  },
+  "status": "passed"
+}

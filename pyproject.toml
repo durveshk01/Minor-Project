@@ -1,0 +1,13 @@
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra"
+markers = ["integration: real model or application integration checks"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+exclude = [".venv", "notebooks", "outputs"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]

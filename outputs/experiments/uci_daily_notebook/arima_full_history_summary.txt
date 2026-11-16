@@ -1,0 +1,25 @@
+Sales were scaled by 16990 for optimization; forecasts are restored to original units.
+                               SARIMAX Results                                
+==============================================================================
+Dep. Variable:                  sales   No. Observations:                  374
+Model:                 ARIMA(1, 1, 1)   Log Likelihood                -450.712
+Date:                Mon, 16 Nov 2026   AIC                            907.424
+Time:                        21:56:13   BIC                            919.188
+Sample:                    12-01-2010   HQIC                           912.095
+                         - 12-09-2011                                         
+Covariance Type:                  opg                                         
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+ar.L1          0.1210      0.056      2.159      0.031       0.011       0.231
+ma.L1         -0.8954      0.027    -33.408      0.000      -0.948      -0.843
+sigma2         0.6538      0.028     23.165      0.000       0.598       0.709
+===================================================================================
+Ljung-Box (L1) (Q):                   0.00   Jarque-Bera (JB):               296.80
+Prob(Q):                              1.00   Prob(JB):                         0.00
+Heteroskedasticity (H):               1.89   Skew:                             0.96
+Prob(H) (two-sided):                  0.00   Kurtosis:                         6.93
+===================================================================================
+
+Warnings:
+[1] Covariance matrix calculated using the outer product of gradients (complex-step).

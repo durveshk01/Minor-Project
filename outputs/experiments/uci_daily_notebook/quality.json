@@ -1,0 +1,17 @@
+{
+  "rows": 305,
+  "columns": 3,
+  "missing_by_column": {
+    "Date": 0,
+    "Sales": 0,
+    "Transactions": 0
+  },
+  "duplicates": 0,
+  "invalid_dates": 0,
+  "missing_dates": 0,
+  "invalid_sales": 0,
+  "missing_sales": 0,
+  "negative_sales": 1,
+  "zero_sales": 0,
+  "suggested_frequency": "D"
+}

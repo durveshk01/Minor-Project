@@ -1,0 +1,77 @@
+{
+  "ARIMA": {
+    "name": "ARIMA",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      7
+    ],
+    "trend": null,
+    "interval_width": 0.95,
+    "maxiter": 150,
+    "yearly_seasonality": null,
+    "weekly_seasonality": null,
+    "daily_seasonality": false,
+    "seasonality_mode": "additive",
+    "changepoint_prior_scale": 0.05,
+    "use_holidays": false,
+    "regressor_columns": [],
+    "seed": 42
+  },
+  "SARIMA": {
+    "name": "SARIMA",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      7
+    ],
+    "trend": null,
+    "interval_width": 0.95,
+    "maxiter": 150,
+    "yearly_seasonality": null,
+    "weekly_seasonality": null,
+    "daily_seasonality": false,
+    "seasonality_mode": "additive",
+    "changepoint_prior_scale": 0.05,
+    "use_holidays": false,
+    "regressor_columns": [],
+    "seed": 42
+  },
+  "Prophet": {
+    "name": "Prophet",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      7
+    ],
+    "trend": null,
+    "interval_width": 0.95,
+    "maxiter": 150,
+    "yearly_seasonality": false,
+    "weekly_seasonality": true,
+    "daily_seasonality": false,
+    "seasonality_mode": "additive",
+    "changepoint_prior_scale": 0.05,
+    "use_holidays": false,
+    "regressor_columns": [],
+    "seed": 42
+  }
+}

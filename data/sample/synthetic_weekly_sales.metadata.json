@@ -1,0 +1,8 @@
+{
+  "name": "Synthetic weekly retail test data",
+  "kind": "synthetic",
+  "source_url": "Locally generated using NumPy seed 42",
+  "currency": "sales units",
+  "license": "Project-generated testing fixture",
+  "description": "208 Fridays \u00d7 2 stores \u00d7 3 departments. Simulated trend, annual cycle, holiday uplift and Gaussian noise. NOT Walmart data and NOT empirical business findings."
+}

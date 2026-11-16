@@ -1,0 +1,409 @@
+{
+  "executed_at": "2026-11-16T16:26:18.845306+00:00",
+  "status": "success",
+  "experiment": "UCI daily net revenue; prespecified models, common chronological holdout",
+  "dataset_fingerprint": "c40c7a2d953a48c7c668e979f4b87a011afccf2f6d969a037936b58f9d2adf02",
+  "data_provenance": {
+    "name": "UCI Online Retail — recorded daily net revenue",
+    "kind": "real",
+    "source_url": "https://archive.ics.uci.edu/dataset/352/online+retail",
+    "download_url": "https://archive.ics.uci.edu/static/public/352/online+retail.zip",
+    "citation": "Chen, D. (2015). Online Retail. UCI Machine Learning Repository. DOI: 10.24432/C5BW33.",
+    "license": "CC BY 4.0",
+    "currency": "GBP",
+    "downloaded_at": "2026-11-16T10:27:54.090920+00:00",
+    "source_sha256": "43465a06f2ccf7c8b5bd2892bc7defb52f97487934fe93b16ae4c3936424676d",
+    "source_rows": 541909,
+    "source_columns": [
+      "InvoiceNo",
+      "StockCode",
+      "Description",
+      "Quantity",
+      "InvoiceDate",
+      "UnitPrice",
+      "CustomerID",
+      "Country"
+    ],
+    "date_start": "2010-12-01T08:26:00",
+    "date_end": "2011-12-09T12:50:00",
+    "derived_rows": 305,
+    "negative_transaction_count": 9290,
+    "exact_source_duplicates": 5268,
+    "derivation": "Sales = Quantity × UnitPrice; sum every transaction by invoice calendar date. Refunds, cancellations and exact source duplicates are retained. Customer identifiers are excluded from the derived file.",
+    "missing_dates": "Dates without source transactions are absent, not automatically filled. Choose an explicit missing-period strategy in preprocessing.",
+    "filename": "uci_online_retail_daily.csv",
+    "dataset_file_sha256": "d9b2e2d967602d1aa41fcdb48701ba5d5bc07c4bed056ce21e8f23eebaaeef5c",
+    "input_rows": 305,
+    "filtered_rows": 305,
+    "cleaned_rows": 305,
+    "frequency": "D",
+    "aggregation": "sum",
+    "mapping": {
+      "date": "Date",
+      "sales": "Sales",
+      "quantity": null,
+      "unit_price": null,
+      "holiday": null
+    },
+    "cleaning": {
+      "invalid_rows": "reject",
+      "duplicates": "keep",
+      "missing_sales": "reject",
+      "negative_sales": "keep",
+      "date_format": null,
+      "day_first": false
+    },
+    "aggregation_options": {
+      "frequency": "D",
+      "method": "sum",
+      "missing_periods": "ffill",
+      "source_frequency": "D",
+      "regressors": []
+    },
+    "filters": {},
+    "date_range": null
+  },
+  "python": "3.12.10",
+  "packages": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "scipy": "1.15.3",
+    "statsmodels": "0.14.4",
+    "prophet": "1.1.7",
+    "cmdstanpy": "1.2.5",
+    "google-genai": "1.26.0"
+  },
+  "seed": 42,
+  "train_size": 344,
+  "holdout_size": 30,
+  "training_end": "2011-11-09T00:00:00",
+  "holdout_start": "2011-11-10T00:00:00",
+  "holdout_end": "2011-12-09T00:00:00",
+  "ranking_metric": "RMSE",
+  "best_model": "SARIMA",
+  "model_comparison": [
+    {
+      "Model": "ARIMA",
+      "MAE": 14384.500050921648,
+      "RMSE": 19529.031449786424,
+      "MAPE": 29.657947988864798,
+      "sMAPE": 26.745593271953854,
+      "Bias": -5150.079015645192,
+      "Training Time": 0.03364729997701943,
+      "Scored Observations": 26,
+      "MAPE Observations": 26,
+      "Zero Actuals": 0,
+      "Status": "success",
+      "Error": ""
+    },
+    {
+      "Model": "SARIMA",
+      "MAE": 12076.295974515824,
+      "RMSE": 16669.55999974924,
+      "MAPE": 26.4497989075375,
+      "sMAPE": 22.147124546541953,
+      "Bias": 4013.102018162023,
+      "Training Time": 0.12338139995699748,
+      "Scored Observations": 26,
+      "MAPE Observations": 26,
+      "Zero Actuals": 0,
+      "Status": "success",
+      "Error": ""
+    },
+    {
+      "Model": "Prophet",
+      "MAE": 12312.632984393706,
+      "RMSE": 17955.768433582998,
+      "MAPE": 21.49245670226193,
+      "sMAPE": 22.147029816290633,
+      "Bias": -7436.186759869437,
+      "Training Time": 0.1530365999788046,
+      "Scored Observations": 26,
+      "MAPE Observations": 26,
+      "Zero Actuals": 0,
+      "Status": "success",
+      "Error": ""
+    }
+  ],
+  "baselines": [
+    {
+      "Baseline": "Last-value naive",
+      "MAE": 15008.011153846155,
+      "RMSE": 19868.399504592424,
+      "MAPE": 36.90257940433925,
+      "sMAPE": 27.29836370767542,
+      "Bias": 6200.015769230769,
+      "Scored Observations": 26,
+      "MAPE Observations": 26,
+      "Zero Actuals": 0
+    },
+    {
+      "Baseline": "Seven-day seasonal naive",
+      "MAE": 12353.89076923077,
+      "RMSE": 15328.037260530382,
+      "MAPE": 26.38633532082068,
+      "sMAPE": 22.672943632419575,
+      "Bias": 2951.8869230769246,
+      "Scored Observations": 26,
+      "MAPE Observations": 26,
+      "Zero Actuals": 0
+    }
+  ],
+  "model_configurations": {
+    "ARIMA": {
+      "name": "ARIMA",
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "seasonal_order": [
+        0,
+        1,
+        1,
+        7
+      ],
+      "trend": null,
+      "interval_width": 0.95,
+      "maxiter": 150,
+      "yearly_seasonality": null,
+      "weekly_seasonality": null,
+      "daily_seasonality": false,
+      "seasonality_mode": "additive",
+      "changepoint_prior_scale": 0.05,
+      "use_holidays": false,
+      "regressor_columns": [],
+      "seed": 42
+    },
+    "SARIMA": {
+      "name": "SARIMA",
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "seasonal_order": [
+        0,
+        1,
+        1,
+        7
+      ],
+      "trend": null,
+      "interval_width": 0.95,
+      "maxiter": 150,
+      "yearly_seasonality": null,
+      "weekly_seasonality": null,
+      "daily_seasonality": false,
+      "seasonality_mode": "additive",
+      "changepoint_prior_scale": 0.05,
+      "use_holidays": false,
+      "regressor_columns": [],
+      "seed": 42
+    },
+    "Prophet": {
+      "name": "Prophet",
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "seasonal_order": [
+        0,
+        1,
+        1,
+        7
+      ],
+      "trend": null,
+      "interval_width": 0.95,
+      "maxiter": 150,
+      "yearly_seasonality": false,
+      "weekly_seasonality": true,
+      "daily_seasonality": false,
+      "seasonality_mode": "additive",
+      "changepoint_prior_scale": 0.05,
+      "use_holidays": false,
+      "regressor_columns": [],
+      "seed": 42
+    }
+  },
+  "model_warnings": {
+    "ARIMA": [],
+    "SARIMA": [],
+    "Prophet": []
+  },
+  "future_forecasts": {
+    "ARIMA": {
+      "run_id": "32ac2a5675b148ae877949afe453a390",
+      "horizon": 30,
+      "training_observations": 374,
+      "training_seconds": 0.03086599998641759,
+      "warnings": []
+    },
+    "SARIMA": {
+      "run_id": "3389d4381f3541d0b1479a0030251946",
+      "horizon": 30,
+      "training_observations": 374,
+      "training_seconds": 0.19131850003032014,
+      "warnings": []
+    },
+    "Prophet": {
+      "run_id": "5d044d4e9d044dfc87b913cb25f61dc5",
+      "horizon": 30,
+      "training_observations": 374,
+      "training_seconds": 0.09547110000858083,
+      "warnings": []
+    }
+  },
+  "insights_source": "Local analytics",
+  "insights_status": "missing_key",
+  "artifacts": {
+    "processed_calendar.csv": {
+      "bytes": 12542,
+      "sha256": "798f44bc62241eca7e13fe1a9d09e94fb4bafd30f0819b3094cfd4b17728aa19"
+    },
+    "cleaning_audit.csv": {
+      "bytes": 1065,
+      "sha256": "3daef0ad2c85d572daf81102d0ccf544fd6da18b9d16be418b13c1a36b42488a"
+    },
+    "dataset_metadata.json": {
+      "bytes": 2029,
+      "sha256": "b891fb735daebc682c3bf7cf3fb79154e3e73ee0d29da2df0bbd43df2e5da0d6"
+    },
+    "statistics.json": {
+      "bytes": 537,
+      "sha256": "4f2d424b722a47028ba091bad36cd192ea3ee9b9f8703c255547f509a0b352e1"
+    },
+    "quality.json": {
+      "bytes": 295,
+      "sha256": "31c50d06ab2f215bcd34fd09339221a905b72622a2ac696645fdee966778c28e"
+    },
+    "seasonal_components.csv": {
+      "bytes": 28839,
+      "sha256": "e1da0090b9b79abc685e01260bc473e31739d179562b3ca856f50ca50eff9a1e"
+    },
+    "seasonal_diagnostics.json": {
+      "bytes": 476,
+      "sha256": "81ed7cf006af7f02be84de3cfacac826f078cae8f52af8c07fb4e49cd6fa8c23"
+    },
+    "model_comparison.csv": {
+      "bytes": 527,
+      "sha256": "0012b6c4951582ec654a5d3c36c42a3b7e524860096778313904842ccad6aa51"
+    },
+    "baseline_comparison.csv": {
+      "bytes": 334,
+      "sha256": "bc72bb0f5135fccd491dbbf0ad213a7a289eca58680aaf9bf480a5d988fb503d"
+    },
+    "model_configurations.json": {
+      "bytes": 1389,
+      "sha256": "e62e6bec8aeef8774417732a8a8e8f2db2c587d55cd53c7ae4fcc1c9aea2df04"
+    },
+    "arima_holdout.csv": {
+      "bytes": 3932,
+      "sha256": "7fd832b5a811aa4f9459f88e3c416aab219e724060196e422abb3deb627c20e9"
+    },
+    "arima_holdout_summary.txt": {
+      "bytes": 1874,
+      "sha256": "19c0dc731cc3e4b1963fc251ffb27c4034dbbdd0c92a176dab9fdcba4abec79c"
+    },
+    "sarima_holdout.csv": {
+      "bytes": 3927,
+      "sha256": "f2657f5584ded123a367fe0cf1f29d0d1ea8947440da18e697c1b9e66ace8661"
+    },
+    "sarima_holdout_summary.txt": {
+      "bytes": 2101,
+      "sha256": "e0af5b3756393ee44a9b3f1a6b30a1b85116ad64cc84aca85a122b5616682e96"
+    },
+    "prophet_holdout.csv": {
+      "bytes": 5811,
+      "sha256": "36acddd061b3f40c6b02491027ce616e0a6bc4183329924d8202adadfd7348ef"
+    },
+    "prophet_holdout_summary.txt": {
+      "bytes": 1273,
+      "sha256": "cfec5a31a15a03e0fe2c89496aa2ea263a240364a3812124da05ef0ef436b861"
+    },
+    "backtest_comparison.csv": {
+      "bytes": 550,
+      "sha256": "60f6862f27fe27304bb4a719ad8b6a47c04e70b981fad6b2371f95e50125bae7"
+    },
+    "backtest_folds.csv": {
+      "bytes": 1689,
+      "sha256": "987e612e3916c3a3c25ee278e6d0c990d55317abbdeda35ccfb0ef93feed9dcd"
+    },
+    "arima_backtest.csv": {
+      "bytes": 6019,
+      "sha256": "2804e2afb8ca42557101d906ac58c1b383c4bd694e014e08a74378d503ed38cc"
+    },
+    "sarima_backtest.csv": {
+      "bytes": 6022,
+      "sha256": "c987be7b1d291d3c9699ea6027ba98bbe71b67f5ef7906658ff4e3feab36ec9f"
+    },
+    "prophet_backtest.csv": {
+      "bytes": 8649,
+      "sha256": "59c47355409b8532b797d44d1ec99ee7bb99e3e7fba331e0ba095d932d5eb2b1"
+    },
+    "arima_future_forecast.csv": {
+      "bytes": 2046,
+      "sha256": "e595ee44500eb904363c54c7eaefcd18720a36e6886c22f5356084260d1d200c"
+    },
+    "arima_full_history_summary.txt": {
+      "bytes": 1872,
+      "sha256": "16f34bae5da2168d43336aa6b248fb868d7854ab094c09b4f32718627fedb630"
+    },
+    "sarima_future_forecast.csv": {
+      "bytes": 2025,
+      "sha256": "a7fae15d4276d5893159dce6a6539c321b71e28b364386de94fa7194edbd1c41"
+    },
+    "sarima_full_history_summary.txt": {
+      "bytes": 2099,
+      "sha256": "2ef074906943628258351fee877666f31619707c4354a9f67838e9893cfe8c77"
+    },
+    "prophet_future_forecast.csv": {
+      "bytes": 3889,
+      "sha256": "f0a7b52d1f25fc398a3922c51171b97d07cadb0082fb45cfde64400602c9f685"
+    },
+    "prophet_full_history_summary.txt": {
+      "bytes": 1273,
+      "sha256": "fd9f7b8ecd60d9f1521f50497b05e3495ba9b3d8c15431bbaabd6f0035c8caa4"
+    },
+    "insights.json": {
+      "bytes": 1374,
+      "sha256": "4fbcbe0ce37b364409663a14dd5d2a2e94019e56f00a1d95c2cfe60d33e4c0e8"
+    },
+    "report_snapshot.json": {
+      "bytes": 175515,
+      "sha256": "d2453bb0e7e8db03add0e058b7c0a88494343f72523d032a4235c306a3bfdef1"
+    },
+    "salesvision_report.xlsx": {
+      "bytes": 60985,
+      "sha256": "1087583ef7eef3a528ba6be5ec25424073b50d9d5a0be86c37368e1986e1b1c0"
+    },
+    "salesvision_report.pdf": {
+      "bytes": 636296,
+      "sha256": "e92fe59333350658c1c96e34f88b21ed006a853a5de9b8d74d71f53fe854ee2b"
+    },
+    "historical_sales.png": {
+      "bytes": 85169,
+      "sha256": "e3b72116c298b294208c13b235949cca4f606de1a2295db6219c29bd47333508"
+    },
+    "seasonal_decomposition.png": {
+      "bytes": 178104,
+      "sha256": "93a1fb215a3941ec3c4088e496c712399d37a5fe211ed87b604970f4164222f5"
+    },
+    "model_comparison.png": {
+      "bytes": 20376,
+      "sha256": "58d35eaf869d097ed356bde0d465497fcda914f5c590915f74d9ce3ede489e8c"
+    },
+    "holdout_predictions.png": {
+      "bytes": 96983,
+      "sha256": "9812b683f3504f23ac4425701f90d2011e259accb8ff00a74cef8259b4e231d1"
+    },
+    "selected_forecast.png": {
+      "bytes": 104449,
+      "sha256": "47b1e7b100e8bfb7ef8f7a51d6f50538158cb75365c0e7dddcec03752d47e478"
+    },
+    "results.md": {
+      "bytes": 3170,
+      "sha256": "10633170907a6e273d00ec74d4169ad6b60d7d6056858c9aba660ab93d59a9a1"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "text": "### Computed analytics summary\n- Observed historical sales total **9,747,747.93 GBP** across **305** observed periods.\n- Mean period sales are **31,959.83**, with a range from **-1,566.23** to **112,141.11**.\n- First-to-latest observed-period growth is **-45.20%**. This is not a causal trend estimate.\n- **69** unknown periods used the explicitly selected **ffill** strategy. Imputed targets are excluded from model scoring.\n- STL seasonal strength is **0.386** at **7** observations per cycle. Interpret this as descriptive evidence.\n- Holdout selection uses the lowest **RMSE**. Best successful model: **SARIMA**.\n- **SARIMA** predicts a raw total of **1,693,961.86 GBP** over **30** future periods after full-history retraining.\n- Use period uncertainty intervals for scenario review. Revenue forecasts alone cannot determine inventory quantities without product mix, prices and lead times.\n\nThis is a deterministic explanation of computed analytics, labeled separately from Gemini-generated insights.",
+  "source": "Local analytics",
+  "status": "service_unavailable",
+  "message": "Gemini is temporarily unavailable. Core analytics and forecasts remain available.",
+  "context_hash": "6bb01496ee83ca19148f65366305e765dd2b00221cb537bb23093554822eaba6",
+  "generated_at": "2026-11-16T16:26:43.050498+00:00",
+  "model": "gemini-3.1-flash-lite"
+}

@@ -1,0 +1,26 @@
+SARIMAX implementation; sales scaled by 15088.4. Regressor scaling learned only from training data. Forecasts restored to original units.
+                                     SARIMAX Results                                     
+=========================================================================================
+Dep. Variable:                             sales   No. Observations:                  344
+Model:             SARIMAX(1, 1, 1)x(0, 1, 1, 7)   Log Likelihood                -391.377
+Date:                           Mon, 16 Nov 2026   AIC                            790.753
+Time:                                   21:56:10   BIC                            806.022
+Sample:                               12-01-2010   HQIC                           796.840
+                                    - 11-09-2011                                         
+Covariance Type:                             opg                                         
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+ar.L1          0.1306      0.068      1.912      0.056      -0.003       0.264
+ma.L1         -0.8427      0.039    -21.403      0.000      -0.920      -0.766
+ma.S.L7       -0.9035      0.026    -34.536      0.000      -0.955      -0.852
+sigma2         0.5778      0.027     21.260      0.000       0.525       0.631
+===================================================================================
+Ljung-Box (L1) (Q):                   0.05   Jarque-Bera (JB):               253.18
+Prob(Q):                              0.82   Prob(JB):                         0.00
+Heteroskedasticity (H):               1.81   Skew:                             1.11
+Prob(H) (two-sided):                  0.00   Kurtosis:                         6.63
+===================================================================================
+
+Warnings:
+[1] Covariance matrix calculated using the outer product of gradients (complex-step).
