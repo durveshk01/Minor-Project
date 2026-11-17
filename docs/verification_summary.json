@@ -1,5 +1,5 @@
 {
-  "verified_at": "2026-11-16T17:08:43.028380+00:00",
+  "verified_at": "2026-11-17T05:16:07.147214+00:00",
   "python": "3.12.10",
   "experiments": [
     {
@@ -64,8 +64,8 @@
   "notebook_cli_reproduction": "passed",
   "documentation": {
     "status": "passed",
-    "markdown_files": 12,
-    "local_links": 64
+    "markdown_files": 13,
+    "local_links": 77
   },
   "qa": {
     "status": "passed",
@@ -82,9 +82,9 @@
     "ruff": "passed",
     "dependencies": "passed",
     "source_inventory": {
-      "inspected_files": 107,
-      "python_files": 64,
-      "audit_updated_files": 47,
+      "inspected_files": 109,
+      "python_files": 65,
+      "audit_updated_files": 49,
       "issue_counts": {
         "identified": 42,
         "fixed": 42,

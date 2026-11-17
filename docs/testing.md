@@ -17,7 +17,7 @@ Verification uses pinned **Windows 11 / Python 3.12.10** dependencies. The [fina
 | Fresh local notebook | **15/15 code cells; 0 errors; 10.77 s** | Executed notebook and `outputs/qa/notebook-execution.json` |
 | CLI / notebook / UI fidelity | Independent error/date/baseline/backtest recomputation agrees | `scripts/verify_delivery.py` |
 | Reports | Both experiments: 9-page PDFs, 16-sheet workbooks | Experiment manifests and parsed exports |
-| Portable delivery | 150 archive members verified; fresh extracted-app Chrome smoke passed with 305 records / 374 D periods | `outputs/qa/delivery-results.json` |
+| Portable delivery | 153 archive members verified; fresh extracted-app Chrome smoke passed with 305 records / 374 D periods | `outputs/qa/delivery-results.json` |
 | Final live Gemini recheck | Connectivity success; generation **service_unavailable**, labelled Local analytics | `outputs/qa/gemini-audit-final.json` |
 
 The two final suites execute **320 successful test cases across 160 unique cases**. Their fixture databases are isolated and their ordinary AI tests disable real provider requests. The original baseline grew by 84 cases covering independently identified boundaries and genuine model/UI integration.
@@ -103,4 +103,4 @@ The independent experiment verifier recomputes errors from genuine observed actu
 
 Archive verification checks CRCs, paths, required files, source-byte equality, blank example credentials and private/runtime/customer-source exclusions. The smoke check extracts the archive into a temporary directory, starts its app with the current interpreter, loads the packaged real sample and preprocesses **305 records into 374 daily periods**. This verifies extracted application execution on the measured machine.
 
-The verified **150-file** archive contains the safe verification summary, final audit, screenshots, executed notebook and real CLI artifacts. Detailed QA XML/JSON, databases, logs, clean environments and downloads stay local. Final archive integrity/source/exclusion checks and fresh extracted-app Chrome smoke passed; results, byte size and SHA-256 are recorded in `outputs/qa/delivery-results.json`.
+The verified **153-file** archive contains the safe verification summary, final audit, screenshots, executed notebook, real CLI artifacts and faculty manual/PDF/generator. Detailed QA XML/JSON, databases, logs, clean environments and downloads stay local. Final archive integrity/source/exclusion checks and fresh extracted-app Chrome smoke passed; results, byte size and SHA-256 are recorded in `outputs/qa/delivery-results.json`.

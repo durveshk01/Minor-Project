@@ -17,6 +17,7 @@ data/source/*
 models/*
 !models/.gitkeep
 outputs/**/*.sqlite3*
+outputs/**/notebook_results.zip
 outputs/experiments/**/notebook_results.zip
 outputs/logs/
 outputs/history/

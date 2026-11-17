@@ -6,14 +6,14 @@
 
 The shared Streamlit/CLI/notebook numerical workflow passes its final local acceptance checks. Genuine ARIMA, SARIMA/SARIMAX and Prophet models were evaluated and forecasted through the actual browser on daily, anchored-weekly and monthly data. All twelve workspaces, exports, history and conditional upload workflows were exercised.
 
-- **107 distributable files inspected**, including **64 Python files** and all **15 notebook code-cell sources**.
+- **109 distributable files inspected**, including **65 Python files** and all **15 notebook code-cell sources**. The separately verified faculty PDF is an additional generated deliverable.
 - **42 grouped issues identified and fixed**; zero remaining recorded critical/high-priority issues.
-- **47 updated source/configuration/tooling/test/documentation/notebook paths**, including **5 added files** and **42 updated existing files**. Sixteen screenshots and the experiment artifacts were also regenerated.
+- **49 updated source/configuration/tooling/test/documentation/notebook paths**, including **7 added files** and **42 updated existing files**. Sixteen screenshots and the experiment artifacts were also regenerated.
 - **160/160 final tests passed** in both the project environment and a newly created pinned environment: **320 passing acceptance executions**, zero failures/errors/skips.
 - **63/63 complete actual-Chrome checks passed**, zero JavaScript exceptions; **16** screenshots; all twelve pages checked at **390 × 844**.
 - Fresh local notebook: **15/15 code cells**, zero errors; independently reproduced CLI metrics.
 - Refreshed experiment reports: **9-page illustrated PDFs**, **16-sheet Excel workbooks**; actual values, calendars, metrics and checksums independently verified.
-- **150-file portable archive verified**, including CRCs, safe paths and exact current-source bytes; fresh extracted-app Chrome smoke passed with 305 real records / 374 daily periods.
+- **153-file portable archive verified**, including the faculty manual/PDF/generator, CRCs, safe paths and exact current-source bytes; fresh extracted-app Chrome smoke passed with 305 real records / 374 daily periods.
 - Final live Gemini lookup succeeded but generation returned **`service_unavailable`**. The complete acceptance browser run and refreshed CLI evidence use correctly labelled **Local analytics**. Earlier live success is retained as historical evidence.
 
 The portable archive rebuild/extraction checks are recorded under **Delivery verification** below. Detailed machine-local execution records are in `outputs/qa/`; the distributable [verification summary](verification_summary.json) retains safe aggregate evidence.
@@ -100,7 +100,7 @@ QA filenames in this key are under `outputs/qa/`. Historic negative runs are int
 | CLI + notebook artifact hashes | 74 | 74 | 0 mismatches | 37 per experiment |
 | Experiment PDFs / workbooks | 2 / 2 | 2 / 2 | 0 parse/value mismatches | 9 pages / 16 sheets each |
 | Ruff / dependency consistency | 2 | 2 | 0 failures | Current project interpreter |
-| Portable archive members | 150 | 150 | 0 CRC/path/source/credential failures | Current-source byte equality |
+| Portable archive members | 153 | 153 | 0 CRC/path/source/credential failures | Current-source byte equality |
 | Fresh extracted-app Chrome smoke | 1 | 1 | 0 failures | 305 real records / 374 D periods |
 
 The initial suite had **76 cases**, all passing. Independent pre-fix records contain **80 executed cases: 8 passed, 72 failed, zero errors/skips**, spanning 39 distinct regression functions. These historic failures include parameter variants and successive discoveries. The final suite contains **84 additional cases** and passes in both environments. The audit ledger also includes source-confirmed and actual-browser/tooling defects.
@@ -159,7 +159,7 @@ Source: Chen, D. (2015), UCI Online Retail, DOI `10.24432/C5BW33`, CC BY 4.0. Th
 
 ## Updated file manifest
 
-The timestamp-backed manifest in `outputs/qa/audit-inventory.json` records **47 non-PNG updated paths**, including the Git publication configuration:
+The timestamp-backed manifest in `outputs/qa/audit-inventory.json` records **49 non-PNG updated paths**, including Git publication configuration and faculty documentation:
 
 ```text
 .gitattributes                                  added
@@ -170,6 +170,7 @@ notebooks/Sales_Forecasting_Experiments.ipynb
 pyproject.toml
 scripts/audit_project.py                         added
 scripts/browser_qa.py
+scripts/build_faculty_guide.py                    added
 scripts/package_project.py
 scripts/verify_clean_environment.py              added
 scripts/verify_delivery.py
@@ -199,6 +200,7 @@ tests/test_reports.py
 tests/test_ui.py
 README.md
 docs/FINAL_PROJECT_AUDIT.md                       added
+docs/faculty_demonstration_guide.md               added
 docs/architecture.md
 docs/colab.md
 docs/experimental_results.md
@@ -217,7 +219,7 @@ The **16 regenerated PNG screenshots** and regenerated CLI/notebook outputs are 
 
 Archive: `outputs/salesvision_project.zip`. The packaging script includes the complete source/config/tests/guides/diagrams, labelled samples, 16 screenshots, executed notebook, final audit/safe summary and genuine CLI result artifacts. It excludes `.env`, private secrets, virtual environments, caches, runtime databases/logs, uploaded sources and the customer-level workbook.
 
-Final delivery verification **passed**: **150 archive members**, valid CRCs and safe member paths, all required delivery files present, exact byte agreement with current distributable sources, successful Python compilation, blank example credentials and private/runtime/customer-source exclusions. Git attributes preserve these bytes across clones, and generated SQLite history is ignored at every output-directory depth. `outputs/qa/delivery-results.json` records the final archive byte size, SHA-256 and detailed verification results.
+Final delivery verification **passed**: **153 archive members**, valid CRCs and safe member paths, all required delivery files present, exact byte agreement with current distributable sources, successful Python compilation, blank example credentials and private/runtime/customer-source exclusions. Git attributes preserve these bytes across clones, and generated SQLite history and database-containing notebook bundles remain local. `outputs/qa/delivery-results.json` records the final archive byte size, SHA-256 and detailed verification results.
 
 Fresh temporary-extraction Chrome smoke **passed** using Python **3.12.10**: healthy Streamlit startup, packaged real UCI sample loading, preprocessing **305 records into 374 daily periods**, and no displayed application errors. Gemini was disabled for this isolated smoke workflow. This establishes extracted application execution on the measured machine; installation on another machine or operating system remains untested.
 

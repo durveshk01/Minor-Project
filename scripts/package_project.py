@@ -9,6 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 TOP_LEVEL_FILES = (
     "app.py", "README.md", "requirements.txt", "requirements-dev.txt", "constraints.txt",
     "pyproject.toml", ".env.example", ".gitignore", ".gitattributes", ".streamlit/config.toml",
+    "outputs/SalesVision_Faculty_Demonstration_and_User_Guide.pdf",
 )
 DIRECTORIES = ("src", "config", "assets", "scripts", "tests", "docs", "notebooks", "data/sample", "outputs/experiments/uci_daily")
 MARKERS = ("data/source/.gitkeep", "data/uploads/.gitkeep", "data/processed/.gitkeep", "models/.gitkeep", "outputs/.gitkeep")

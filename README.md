@@ -87,7 +87,7 @@ Gemini receives aggregate historical statistics, STL diagnostics, evaluation sco
 - [Colab instructions](docs/colab.md) cover project ZIP upload, optional Drive mounting, dependencies, hidden key entry, and result downloads. Hosted Colab execution has not been verified.
 - Create the portable archive with `python scripts/package_project.py`; its default output is `outputs/salesvision_project.zip`.
 - The archive includes source, documentation, screenshots, sample data, the notebook, and real CLI results. Runtime databases, credentials, original customer-level source files, caches, and the virtual environment are excluded.
-- The final **150-file** archive passed integrity/current-source checks and a fresh extracted-app Chrome smoke, loading 305 real records and preprocessing 374 daily periods. Detailed results are recorded in `outputs/qa/delivery-results.json`.
+- The final **153-file** archive includes the faculty manual/PDF/generator and passed integrity/current-source checks and a fresh extracted-app Chrome smoke, loading 305 real records and preprocessing 374 daily periods. Detailed results are recorded in `outputs/qa/delivery-results.json`.
 - `.gitattributes` preserves source, dataset and generated artifact bytes in Git so provenance hashes and manifest checksums remain reproducible after cloning.
 
 ## Project layout
@@ -119,6 +119,10 @@ sales-forecasting-system/
 ```
 
 ## Documentation
+
+### Faculty demonstration and beginner guide
+
+For Review 3, use the complete [editable faculty demonstration guide](docs/faculty_demonstration_guide.md) and its [formatted PDF](outputs/SalesVision_Faculty_Demonstration_and_User_Guide.pdf). They include Windows setup, all twelve workspaces, speaking scripts, model/metric explanations, 52 viva answers, checklists, timelines and genuine screenshots. Regenerate the PDF with `python scripts/build_faculty_guide.py` in the development environment.
 
 | Guide | Contents |
 |---|---|
